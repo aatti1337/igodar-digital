@@ -1,0 +1,89 @@
+@import "tw-animate-css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  --background: #F0F4F0;
+  --foreground: #2D3B2D;
+  --card: #FFFFFF;
+  --card-foreground: #2D3B2D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D3B2D;
+  --primary: #1B7A3D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F7F0;
+  --secondary-foreground: #2D3B2D;
+  --muted: #F0F7F0;
+  --muted-foreground: #5A6B5A;
+  --accent: #1B7A3D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --border: #D4E5D4;
+  --input: #D4E5D4;
+  --ring: #1B7A3D;
+  --chart-1: #1B7A3D;
+  --chart-2: #2E9B5A;
+  --chart-3: #45B76E;
+  --chart-4: #0D5C2A;
+  --chart-5: #3A8F5C;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2D3B2D;
+  --sidebar-primary: #1B7A3D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0F7F0;
+  --sidebar-accent-foreground: #2D3B2D;
+  --sidebar-border: #D4E5D4;
+  --sidebar-ring: #1B7A3D;
+}
+
+.dark {
+  --background: #1A1F1A;
+  --foreground: #FFFFFF;
+  --card: #242B24;
+  --card-foreground: #FFFFFF;
+  --popover: #242B24;
+  --popover-foreground: #FFFFFF;
+  --primary: #2E9B5A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A352A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A352A;
+  --muted-foreground: #A0B0A0;
+  --accent: #2E9B5A;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --border: #3A4A3A;
+  --input: #3A4A3A;
+  --ring: #2E9B5A;
+  --chart-1: #2E9B5A;
+  --chart-2: #45B76E;
+  --chart-3: #1B7A3D;
+  --chart-4: #0D5C2A;
+  --chart-5: #3A8F5C;
+  --sidebar: #242B24;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #2E9B5A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2A352A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #3A4A3A;
+  --sidebar-ring: #2E9B5A;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,20 @@
+.finthread-gradient {
+  background: linear-gradient(135deg, #0D5C2A 0%, #1B7A3D 40%, #2E9B5A 100%);
+}
+
+.module-card {
+  transition: all 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(27, 122, 61, 0.15);
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0D5C2A 0%, #2E9B5A 100%);
+}
+
+.content-section {
+  scroll-margin-top: 80px;
+}
