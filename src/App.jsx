@@ -63,6 +63,8 @@ import analyseTechniqueImg from './assets/analyse_technique.png'
 import analyseFondamentaleImg from './assets/analyse_fondamentale.png'
 import gestionPortefeuilleImg from './assets/gestion_portefeuille.png'
 import outilsInteractifsImg from './assets/outils_interactifs.png'
+import igoudarHeroImg from './assets/igoudar_hero.jpg'
+import igLogoImg from './assets/ig_logo.png'
 
 const initialModules = [
   {
@@ -528,10 +530,8 @@ function AuthPage({ onLogin, authMode, setAuthMode }) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center">
-              <Shield className="h-5 w-5 text-white" />
-            </div>
-            <span className="font-bold text-gray-900 text-lg">Igodar Digital</span>
+            <img src={igLogoImg} alt="Igodar Digital" className="h-9 w-9 object-contain" />
+            <span className="font-bold text-gray-900 text-lg">Igoudar Digital</span>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => openAuth('login')} className="text-sm font-medium text-gray-600 hover:text-emerald-700 transition-colors px-4 py-2">
@@ -549,41 +549,51 @@ function AuthPage({ onLogin, authMode, setAuthMode }) {
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-emerald-400/10 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
         </div>
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-xs font-bold bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full uppercase tracking-widest flex items-center gap-2">
-                <Shield className="h-3.5 w-3.5" /> Inspiré de la première banque au monde
-              </span>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Left — Text */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-xs font-bold bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full uppercase tracking-widest flex items-center gap-2">
+                  <Shield className="h-3.5 w-3.5" /> La première banque au monde
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-[1.1] tracking-tight">
+                Comprenez.<br />Investissez.<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">Libérez-vous.</span>
+              </h1>
+              <p className="text-lg mb-8 text-white/85 leading-relaxed">
+                Le monde financier se réinvente. Ceux qui comprennent les marchés construisent leur avenir. Les autres le subissent. <strong className="text-white">Choisissez votre camp.</strong>
+              </p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                <button
+                  onClick={() => openAuth('register')}
+                  className="px-8 py-4 bg-white text-emerald-800 font-bold rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
+                >
+                  <Play className="h-5 w-5" /> Commencer gratuitement
+                </button>
+                <button
+                  onClick={() => openAuth('login')}
+                  className="px-8 py-4 bg-white/10 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
+                >
+                  <ArrowRight className="h-5 w-5" /> J'ai déjà un compte
+                </button>
+              </div>
+              <div className="flex flex-wrap gap-6 text-sm text-white/60">
+                <span className="flex items-center gap-2"><GraduationCap className="h-4 w-4" /> 4 modules</span>
+                <span className="flex items-center gap-2"><BookOpen className="h-4 w-4" /> 41 sections</span>
+                <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 13h+ de contenu</span>
+                <span className="flex items-center gap-2"><Gift className="h-4 w-4" /> 100% gratuit</span>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-[1.1] tracking-tight">
-              Comprenez.<br />Investissez.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">Libérez-vous.</span>
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/85 leading-relaxed max-w-2xl">
-              Le monde financier se réinvente. Ceux qui comprennent les marchés construisent leur avenir. Les autres le subissent. <strong className="text-white">Choisissez votre camp.</strong>
-            </p>
-            <div className="flex flex-wrap gap-3 mb-10">
-              <button
-                onClick={() => openAuth('register')}
-                className="px-8 py-4 bg-white text-emerald-800 font-bold rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
-              >
-                <Play className="h-5 w-5" /> Commencer gratuitement
-              </button>
-              <button
-                onClick={() => openAuth('login')}
-                className="px-8 py-4 bg-white/10 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
-              >
-                <ArrowRight className="h-5 w-5" /> J'ai déjà un compte
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-6 text-sm text-white/60">
-              <span className="flex items-center gap-2"><GraduationCap className="h-4 w-4" /> 4 modules</span>
-              <span className="flex items-center gap-2"><BookOpen className="h-4 w-4" /> 41 sections</span>
-              <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 13h+ de contenu</span>
-              <span className="flex items-center gap-2"><Gift className="h-4 w-4" /> 100% gratuit</span>
+            {/* Right — Hero Image */}
+            <div className="hidden md:block">
+              <img
+                src={igoudarHeroImg}
+                alt="Igoudar — la première banque au monde"
+                className="w-full h-auto rounded-2xl shadow-2xl object-cover max-h-[500px]"
+              />
             </div>
           </div>
         </div>
@@ -793,9 +803,7 @@ function AuthPage({ onLogin, authMode, setAuthMode }) {
             </button>
 
             <div className="text-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
+              <img src={igLogoImg} alt="Igodar Digital" className="h-14 w-14 object-contain mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-gray-900">
                 {authMode === 'register' ? 'Rejoignez Igodar Digital' : 'Bon retour'}
               </h2>
@@ -957,9 +965,12 @@ function Navigation({ isOpen, setIsOpen, currentView, setCurrentView, completedS
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0`}>
         <div className="p-6 h-full flex flex-col">
-          <div className="bg-gradient-to-r from-emerald-700 via-green-600 to-teal-700 text-white p-4 rounded-xl mb-6 shadow-lg">
-            <h2 className="text-lg font-bold">Igodar Digital 🇲🇦</h2>
-            <p className="text-xs opacity-80 italic">La première banque du savoir financier</p>
+          <div className="bg-gradient-to-r from-emerald-700 via-green-600 to-teal-700 text-white p-4 rounded-xl mb-6 shadow-lg flex items-center gap-3">
+            <img src={igLogoImg} alt="iG" className="h-10 w-10 object-contain rounded-lg bg-white/10 p-1" />
+            <div>
+              <h2 className="text-lg font-bold">Igoudar Digital</h2>
+              <p className="text-xs opacity-80 italic">Éducation Financière 🇲🇦</p>
+            </div>
           </div>
 
           <nav className="space-y-2 flex-1 overflow-y-auto">
