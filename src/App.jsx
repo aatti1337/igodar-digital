@@ -530,8 +530,8 @@ function AuthPage({ onLogin, authMode, setAuthMode }) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={igLogoImg} alt="Igodar Digital" className="h-9 w-9 object-contain" />
-            <span className="font-bold text-gray-900 text-lg">Igoudar Digital</span>
+            <img src={igLogoImg} alt="Igoudar Digital" className="h-10 w-10 object-contain" />
+            <span className="font-extrabold text-gray-900 text-xl">Igoudar Digital</span>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => openAuth('login')} className="text-sm font-medium text-gray-600 hover:text-emerald-700 transition-colors px-4 py-2">
